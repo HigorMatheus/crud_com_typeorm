@@ -1,4 +1,4 @@
-import {Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn} from'typeorm'
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn} from'typeorm'
 
 @Entity('products')
   class Product {
@@ -10,7 +10,7 @@ import {Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColu
     name: string
 
     @Column()
-    cost: number
+    cost: string
 
     @Column({
         default:false

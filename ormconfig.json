@@ -1,17 +1,17 @@
 {
-   "type": "mysql",
+   "type": "postgres",
    "host": "localhost",
-   "port": 3306,
-   "username": "root",
-   "password": "",
-   "database": "ormts",
+   "port": 5432,
+   "username": "postgres",
+   "password": "hhiiggoorr5517",
+   "database": "bankpague",
    "synchronize": true,
    "logging": false,
    "entities": [
       "./src/modules/**/infra/typeorm/entities/*.ts"
    ],
    "migrations": [
-      "src/migration/**/*.ts"
+      "./src/shared/infra/typeorm/migrations/*.ts"
    ],
    "subscribers": [
       "src/subscriber/**/*.ts"

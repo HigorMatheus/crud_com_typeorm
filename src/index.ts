@@ -7,6 +7,7 @@ const app = express()
 
 
 app.use(BodyParser.json())
+
 createConnection()
 app.use(routes)
 app.listen(3333,()=>{

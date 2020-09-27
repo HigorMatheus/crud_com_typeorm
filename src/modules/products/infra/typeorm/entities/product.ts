@@ -1,4 +1,5 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn} from'typeorm'
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn, ManyToOne} from'typeorm'
+import Category from "./categories"
 
 @Entity('products')
   class Product {
@@ -12,10 +13,12 @@ import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateCol
     @Column()
     cost: string
 
-    @Column({
-        default:false
-    })
-    digital: boolean
+    @Column()
+    tipo: string
+
+    @ManyToOne(type => Category, category => category.id)
+    category_id: string;
+    
 
     @CreateDateColumn()
     create_at: Date

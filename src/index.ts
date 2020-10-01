@@ -3,6 +3,7 @@ import {createConnection} from "typeorm";
 import * as express from 'express'
 import * as BodyParser from 'body-parser'
 import routes from "./routes";
+
 const app = express()
 app.use(BodyParser.json())
 createConnection()
